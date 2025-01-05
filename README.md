@@ -26,13 +26,16 @@ Main components:
 - Arduino Nano
 - KY-040 Rotary Encoder module
 - KY-003 Hall Effect Sensor Module
-- HD44780 with I2C control board
+- HD44780 20x4 lcd display with I2C control board
 - Mini360 power module
 
 Nice to have:
 - Perf board
 - Jumper wires
 - Neutral cure silicone
+
+Printable parts:
+- [Enclosure for KY003 board](https://www.thingiverse.com/thing:2902487)
 
 
 ## Usage
