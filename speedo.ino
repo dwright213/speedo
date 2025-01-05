@@ -207,8 +207,9 @@ void loop() {
       uiMode = 1;
       setUiMode();
       drawSelector();
+    } else {
+      redrawSelector(cursorDirection);
     }
-    redrawSelector(cursorDirection);
   }
 
   if (inMenuMode()) {
