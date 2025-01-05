@@ -21,8 +21,8 @@ LCDBigNumbers bigNumberLCD(&myLCD, BIG_NUMBERS_FONT_3_COLUMN_3_ROWS_VARIANT_1); 
 #include "env.h"
 
 #ifdef DEBUG
-  #define Sprint(a) (Serial.println(a))
-  #define Sprintln(a) (Serial.print(a))
+  #define Sprint(a) (Serial.print(a))
+  #define Sprintln(a) (Serial.println(a))
 #else
   #define Sprint(a)
   #define Sprintln(a)
@@ -143,6 +143,13 @@ void showSpeed() {
 }
 
 void readEncoder() {
+  static unsigned long lastInterruptTime = 0;
+  unsigned long interruptTime = millis();
+  if (interruptTime - lastInterruptTime < 100) {
+    Sprintln(interruptTime - lastInterruptTime);
+    return;
+  }
+
   int dtValue = digitalRead(ENCODER_DT);
   menuTimer = millis();
   cursorMove = true;
@@ -152,11 +159,13 @@ void readEncoder() {
   if (dtValue == LOW) {
     cursorDirection = false;
   }
+
+  lastInterruptTime = interruptTime;
 }
 
 void setup() 
 {
-  #ifdef DEBUG
+  #ifdef WOKWI
     pinMode(HALL_SENSOR_PIN, INPUT_PULLUP);
   #else
     pinMode(HALL_SENSOR_PIN, INPUT);

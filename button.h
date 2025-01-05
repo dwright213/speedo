@@ -13,7 +13,7 @@ class Button {
     }
 
     void init() {
-      pinMode(pin, INPUT);
+      pinMode(pin, INPUT_PULLUP);
       update();
     }
 
@@ -22,7 +22,6 @@ class Button {
       // in the class, so you don't have to think about it
       // elsewhere in your code
       byte newReading = digitalRead(pin);
-
       
       if (newReading != lastReading) {
         lastDebounceTime = millis();

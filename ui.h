@@ -1,6 +1,7 @@
 #define ENCODER_CLK 2
 #define ENCODER_DT  5
 
+
 int lastClk = HIGH;
 int optionSelected = 0;
 
@@ -37,6 +38,7 @@ void setUnit(int menuChoice) {
     speedUnitTimeFactor = 0.000277778;
     break;
   }
+  Serial.println(speedUnitName);
 }
 
 float getConvertedSpeed(float kmh) {
@@ -59,12 +61,14 @@ void drawSelector() {
 void redrawSelector(bool direction) {
   myLCD.setCursor(0,optionSelected);
   if (direction) {
+    Serial.println("cursor down");
     if ((optionSelected + 1) > 3){
       optionSelected = 0;
     } else {
       optionSelected += 1;
     }
   } else {
+    Serial.println("cursor up");
     if ((optionSelected - 1) < 0){
       optionSelected = 3;
     } else {

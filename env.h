@@ -1,2 +1,2 @@
 // #define WOKWI
-// #define DEBUG
+#define DEBUG
