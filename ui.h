@@ -6,23 +6,23 @@ int lastClk = HIGH;
 int optionSelected = 0;
 
 int speedUnitNumber = 0;
-float speedUnitLengthFactor = 1;
+char speedUnitName[5] = "mph";
+float speedUnitLengthFactor = 0.621371;
 float speedUnitTimeFactor = 1;
-char speedUnitName[5] = "km/h";
 
 // given a number, sets the relevant unit from the menu.
 void setUnit(int menuChoice) {
   switch (menuChoice) {
   case 0:
     speedUnitNumber = 0;
-    strncpy(speedUnitName,"km/h",5);
-    speedUnitLengthFactor = 1;
+    strncpy(speedUnitName,"mph",4);
+    speedUnitLengthFactor = 0.621371;
     speedUnitTimeFactor = 1;
     break;
   case 1:
     speedUnitNumber = 1;
-    strncpy(speedUnitName,"mph",4);
-    speedUnitLengthFactor = 0.621371;
+    strncpy(speedUnitName,"km/h",5);
+    speedUnitLengthFactor = 1;
     speedUnitTimeFactor = 1;
     break;
   case 2:
@@ -84,9 +84,9 @@ void redrawSelector(bool direction) {
 void showMenu() {
   myLCD.clear();
   myLCD.setCursor(1,0);
-  myLCD.print("Km/h");
-  myLCD.setCursor(1,1);
   myLCD.print("Mph");
+  myLCD.setCursor(1,1);
+  myLCD.print("Km/h");
   myLCD.setCursor(1,2);
   myLCD.print("Mach");
   myLCD.setCursor(1,3);
