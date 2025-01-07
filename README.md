@@ -45,7 +45,7 @@ Printable parts:
 
 ## Usage
 
-Ultimately usage is simple. It taps into your vehicle's 12v power and simply shows you how fast you are going, on a 4x20 hd44780 display. Units of measure can be selected using the jogwheel, and a 0-60 timer is also included just for fun.
+All you need to do is turn your bike on, and this device shows your speed in arabic numerals on the screen as you ride. Units of measure can be selected using the jogwheel, and a 0-60 timer is also included just for fun.
 To use the 0-60 timer, come to a stop, press the jogdial button and take off. The first reading of the hall effect sensor will start the timer, and when the timer sees 60 (km/h or mph) it will stop and show your time, until you push the jog dial button again.
 
 
