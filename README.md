@@ -29,13 +29,18 @@ Main components:
 - HD44780 20x4 lcd display with I2C control board
 - Mini360 power module
 
-Nice to have:
+Others:
 - Perf board
 - Jumper wires
 - Neutral cure silicone
+- Cat5 cable (for the wheel sensor)
+- Neodymium magnet 
+- Random clippings from an old wiring harness
+- Trailtech handlebar mount
 
 Printable parts:
-- [Enclosure for KY003 board](https://www.thingiverse.com/thing:2902487)
+- [Main enclosure](https://www.printables.com/model/1138223-speedometer)
+- [Enclosure for the hall effect sensor board](https://www.thingiverse.com/thing:2902487)
 
 
 ## Usage
