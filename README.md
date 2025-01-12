@@ -4,12 +4,8 @@
 
 This is the code for a digital speedometer I built for one of my motorcycles. The motivation is to have a customizable speedometer made with cheap and readily available components, with clear instructions on how to implement it for anyone else's own applications. Also I wanted to improve my C/C++ and get better at electronics.
 
-
-## Table of Contents 
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
+- [Parts List](#parts_list)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
@@ -30,17 +26,23 @@ Main components:
 - Mini360 power module
 
 Others:
-- Perf board
+- Perf board, 81mm by 51mm (I used [this one](https://www.adafruit.com/product/571))
 - Jumper wires
-- Neutral cure silicone
-- Cat5 cable (for the wheel sensor)
-- Neodymium magnet 
-- Random clippings from an old wiring harness
-- Trailtech handlebar mount
+- Neodymium magnet
+- button head screws - M2, M3
+- countersunk screws - M3, M4
+- Heat set inserts - M3 and M4
 
 Printable parts:
 - [Main enclosure](https://www.printables.com/model/1138223-speedometer)
 - [Enclosure for the hall effect sensor board](https://www.thingiverse.com/thing:2902487)
+- [Any mount that fits a Trailtech Vapor](https://www.thingiverse.com/search?q=trailtech+vapor&page=1)
+
+Things that will be nice to have on hand:
+- Cat5 cable
+- An old wiring harness - for scavenging wire.
+- RTV silicone and/or Liquid electrical tape - for sealing enclosures and potting circuit boards.
+- VHB tape (I used this to mount the hall sensor)
 
 
 ## Usage
