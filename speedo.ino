@@ -12,7 +12,7 @@ LiquidCrystal_I2C myLCD(LCD_I2C_ADDRESS, LCD_COLUMNS, LCD_ROWS);
 LCDBigNumbers bigNumberLCD(&myLCD, BIG_NUMBERS_FONT_3_COLUMN_3_ROWS_VARIANT_1); // Use 3x4 numbers, 1. variant
 // end display stuff
 
-#define HALL_SENSOR_PIN 3
+#define HALL_SENSOR_PIN 4
 #define ENCODER_SW  6
 
 #include "ui.h"
@@ -165,13 +165,15 @@ void readEncoder() {
 
 void setup() 
 {
+  Serial.begin(115200);
   #ifdef WOKWI
+    Sprintln("wokwi is defined");
     pinMode(HALL_SENSOR_PIN, INPUT_PULLUP);
   #else
+    Sprintln("wokwi is not defined");
     pinMode(HALL_SENSOR_PIN, INPUT);
   #endif 
-  Serial.begin(115200);
-
+  
   // set up the lcd
   myLCD.init();
   myLCD.clear();
@@ -189,7 +191,7 @@ void setup()
 
 void loop() {
   int pinValue = digitalRead((HALL_SENSOR_PIN));
-  
+  Sprintln(pinValue);
   if (timerButton.isPressed() != timerButtonStatus) {
     timerButtonStatus = timerButton.isPressed();
     if (timerButton.isPressed()) {
