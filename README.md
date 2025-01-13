@@ -16,7 +16,7 @@ This project was developed mostly using the excellet Wokwi, a web based arduino 
 To get this working on actual hardware, you will need the Arduino IDE and a compatible micro controller with the necessary hardware assembled. Once you have that, clone this repo into your Arduino folder, open the project, and upload the code to your device. 
 That is a simplified overview, but I am happy to advise if you are interested in building one of these. 
 
-## [Parts List]
+## Parts List
 
 Main components:
 - Arduino Nano
