@@ -5,7 +5,7 @@
 This is the code for a digital speedometer I built for one of my motorcycles. The motivation is to have a customizable speedometer made with cheap and readily available components, with clear instructions on how to implement it for anyone else's own applications. Also I wanted to improve my C/C++ and get better at electronics.
 
 - [Installation](#installation)
-- [Parts List](#parts_list)
+- [Parts List](#parts-list)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
